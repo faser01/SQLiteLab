@@ -65,7 +65,7 @@ namespace SQLiteLab
             }
             Console.WriteLine("\nВведите новое имя компьютера:");
              string name = Console.ReadLine();
-            string sqlExpression = $"UPDATE  workplace SET имя= '{name}' WHERE монитор='Disp001'";
+            string sqlExpression = $"UPDATE  workplace SET имя= '{name}' WHERE id >=1";
             using (var connection = new SQLiteConnection("Data Source=workplace.sqlite"))
             {
                 connection.Open();
